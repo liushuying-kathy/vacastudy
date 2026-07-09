@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>方块学园 BlockAcademy v2</title>
+  <meta name="description" content="面向小学生的 RPG 式知识冒险：语数英、拓展科目、脑科学训练与生活记录。">
+  <style>
+    :root { --bg:#1a1a2e; --panel:#16213e; --border:#0f3460; --gold:#e8b923; --green:#4e9a06; }
+    * { box-sizing:border-box; margin:0; padding:0; font-family:"Microsoft YaHei","PingFang SC",sans-serif; }
+    body {
+      min-height:100vh; display:flex; align-items:center; justify-content:center;
+      background:radial-gradient(circle at 50% 20%, #243b55 0%, var(--bg) 55%);
+      color:#e0e0e0; padding:24px;
+    }
+    .card {
+      max-width:420px; width:100%; text-align:center;
+      background:var(--panel); border:3px solid var(--border);
+      border-radius:8px; padding:28px 24px 24px;
+      box-shadow:0 8px 24px rgba(0,0,0,.35);
+    }
+    .logo { font-size:56px; line-height:1; margin-bottom:8px; }
+    h1 { font-size:24px; color:var(--gold); text-shadow:2px 2px 0 #5a4a00; margin-bottom:6px; }
+    .sub { font-size:13px; color:#888; margin-bottom:20px; line-height:1.6; }
+    .btn {
+      display:block; width:100%; padding:14px 16px; margin-top:10px;
+      background:#c49a1a; border:3px solid #8b6914; color:#fff;
+      font-size:16px; font-weight:700; border-radius:6px; cursor:pointer;
+      text-decoration:none; box-shadow:inset 0 -4px 0 #8b6914;
+    }
+    .btn:active { transform:translateY(2px); box-shadow:inset 0 -2px 0 #8b6914; }
+    .hint { font-size:11px; color:#666; margin-top:16px; line-height:1.5; }
+    .bar { height:4px; background:#0f1b2e; border-radius:4px; overflow:hidden; margin-top:18px; }
+    .bar i { display:block; height:100%; width:0; background:var(--green); animation:load 1.2s ease forwards; }
+    @keyframes load { to { width:100%; } }
+  </style>
+  <script>
+    (function () {
+      var target = "BlockAcademy_v2.html";
+      setTimeout(function () { location.replace(target); }, 1200);
+      window.enterGame = function () { location.href = target; };
+    })();
+  </script>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">🏛</div>
+    <h1>方块学园</h1>
+    <p class="sub">BlockAcademy v2 · 知识冒险世界<br>语数英 · 拓展科目 · 脑科学 · 生活记录</p>
+    <a class="btn" href="BlockAcademy_v2.html" onclick="enterGame(); return false;">进入游戏 →</a>
+    <div class="bar"><i></i></div>
+    <p class="hint">约 1 秒后自动进入；进度保存在本机浏览器。<br>GitHub Pages 发布入口页 · 游戏主程序为 BlockAcademy_v2.html</p>
+  </div>
+</body>
+</html>
